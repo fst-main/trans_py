@@ -13,8 +13,8 @@ constructed_url = endpoint + path
 
 params = {
     'api-version': '3.0'
-    'from': 'en'
-    'to': ['de', 'it']
+    'from': 'pl'
+    'to': 'en'
 }
 constructed_url = endpoint + path
 
@@ -27,7 +27,7 @@ headers = {
 
 # You can pass more than one object in body.
 body = [{
-    'text': 'Hello World!'
+    'text': 'Just try it and tell me some!'
 }]
 
 request = requests.post(constructed_url, params=params, headers=headers, json=body)
