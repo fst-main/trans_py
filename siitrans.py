@@ -39,4 +39,4 @@ print(json.dumps(response, sort_keys=True, ensure_ascii=False, indent=4, separat
 
 
 document_translation_client = DocumentTranslationClient("https://api.cognitive.microsofttranslator.com", AzureKeyCredential("c34d7e1ff84d4a35855631f70558051f"))
-poller = document_translation_client.begin_translation("https://blobish1.blob.core.windows.net/sas1", "https://blobish1.blob.core.windows.net/sas2", "<target_language_code>")
+poller = document_translation_client.begin_translation("https://blobish1.blob.core.windows.net/sas1", "https://blobish1.blob.core.windows.net/sas2", "en")
