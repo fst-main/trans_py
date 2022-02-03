@@ -15,8 +15,8 @@ constructed_url = endpoint + path
 
 params = {
     'api-version': '3.0'
-    'from': 'pl'
-    'to': 'en'
+    'from':'pl'
+    'to':'en'
 }
 constructed_url = endpoint + path
 
