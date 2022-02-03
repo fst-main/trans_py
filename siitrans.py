@@ -1,4 +1,6 @@
 import requests, uuid, json
+from azure.core.credentials import AzureKeyCredential
+from azure.ai.translation.document import DocumentTranslationClient
 
 # Add your subscription key and endpoint
 subscription_key = "c34d7e1ff84d4a35855631f70558051f"
@@ -34,3 +36,7 @@ request = requests.post(constructed_url, params=params, headers=headers, json=bo
 response = request.json()
 
 print(json.dumps(response, sort_keys=True, ensure_ascii=False, indent=4, separators=(',', ': ')))
+
+
+document_translation_client = DocumentTranslationClient("https://api.cognitive.microsofttranslator.com", AzureKeyCredential("c34d7e1ff84d4a35855631f70558051f"))
+poller = document_translation_client.begin_translation("https://blobish1.blob.core.windows.net/sas1", "https://blobish1.blob.core.windows.net/sas2", "<target_language_code>")
